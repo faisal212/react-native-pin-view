@@ -54,7 +54,7 @@ class PinView extends React.Component {
         }
       } else {
         if(pinLength === this.userInput.length + 1) {
-          this.userInput = this.userInput.concat(parseInt(val));
+          this.userInput = this.userInput.concat(parseInt(val.number));
           console.log(this.userInput)
           this.setDeleteButton(true);
           this.setState({
@@ -71,7 +71,7 @@ class PinView extends React.Component {
             }, this.props.delayBeforeOnComplete)
           });
         } else {
-          this.userInput = this.userInput.concat(parseInt(val));
+          this.userInput = this.userInput.concat(parseInt(val.number));
           this.setDeleteButton(true);
           this.setState({
             animatedInputIndex: this.state.animatedInputIndex.concat(this.userInput.indexOf(parseInt(val)))
